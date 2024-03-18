@@ -53,7 +53,7 @@ public:
         }
     }
 
-    int CalculResult() {
+    int CalculResult(bool flag_1) {
         if (!flag_1) {
             cout << "You lose due to timelimit" << endl;
             return 0;
@@ -98,8 +98,7 @@ int main() {
         FrogGame game;
         game.PrintIntro();
         game.StrIntoNum();
-        bool flag = game.StartGame();
-        game.CalculResult();
+        game.CalculResult( game.StartGame());
         playAgain = game.PrintOuttro();
     }
     return 0;
